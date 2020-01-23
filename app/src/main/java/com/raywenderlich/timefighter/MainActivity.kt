@@ -13,14 +13,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
-  internal lateinit var tapMeButton: Button
-  internal lateinit var gameScoreTextView: TextView
+  private lateinit var tapMeButton: Button
+  private lateinit var gameScoreTextView: TextView
   internal lateinit var timeLeftTextView: TextView
 
-  internal var score = 0
-  internal var gameStarted = false
+  private var score = 0
+  private var gameStarted = false
 
-  internal lateinit var countDownTimer: CountDownTimer
+  private lateinit var countDownTimer: CountDownTimer
   internal val initialCountDown: Long = 60000
   internal val countDownInterval: Long = 1000
   internal var timeLeftOnTimer: Long = 60000
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     timeLeftTextView = findViewById(R.id.timeLeftTextView)
 
     tapMeButton.setOnClickListener { v ->
-      val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce);
+      val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce)
       v.startAnimation(bounceAnimation)
       incrementScore()
     }

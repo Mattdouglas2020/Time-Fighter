@@ -6,5 +6,5 @@
   <string name="gameOverMessage">Times up! Your score was: %1$d</string>
   <string name="aboutMenu">About</string>
   <string name="aboutTitle">Time Fighter %s</string>
-  <string name="aboutMessage">Created by The Mighty Kotlin Developer</string>
+  <string name="aboutMessage">Created By Matthew Douglas</string>
 </resources>
