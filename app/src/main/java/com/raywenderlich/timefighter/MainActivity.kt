@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private const val SCORE_KEY = "SCORE_KEY"
     private const val TIME_LEFT_KEY = "TIME_LEFT_KEY"
   }
-//lol
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
