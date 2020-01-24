@@ -11,7 +11,6 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.raywenderlich.timefighter.BuildConfig
 import com.raywenderlich.timefighter.R
 
 class MainActivity : AppCompatActivity() {
