@@ -1,4 +1,4 @@
-package com.raywenderlich.timefighter
+package com.mattdouglas.timefighter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +11,8 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.raywenderlich.timefighter.BuildConfig
+import com.raywenderlich.timefighter.R
 
 class MainActivity : AppCompatActivity() {
   private lateinit var tapMeButton: Button
@@ -42,7 +44,9 @@ class MainActivity : AppCompatActivity() {
     timeLeftTextView = findViewById(R.id.timeLeftTextView)
 
     tapMeButton.setOnClickListener { v ->
-      val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce)
+      val bounceAnimation = AnimationUtils.loadAnimation(this,
+        R.anim.bounce
+      )
       v.startAnimation(bounceAnimation)
       incrementScore()
     }
@@ -86,7 +90,10 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun showInfo() {
-    val dialogTitle = getString(R.string.aboutTitle, BuildConfig.VERSION_NAME)
+    val dialogTitle = getString(
+      R.string.aboutTitle,
+      BuildConfig.VERSION_NAME
+    )
     val dialogMessage = getString(R.string.aboutMessage)
 
     val builder = AlertDialog.Builder(this)
@@ -104,7 +111,9 @@ class MainActivity : AppCompatActivity() {
     val newScore = getString(R.string.yourScore, score)
     gameScoreTextView.text = newScore
 
-    val blinkAnimation = AnimationUtils.loadAnimation(this, R.anim.blink)
+    val blinkAnimation = AnimationUtils.loadAnimation(this,
+      R.anim.blink
+    )
     gameScoreTextView.startAnimation(blinkAnimation)
   }
 
